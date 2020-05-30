@@ -1,0 +1,46 @@
+{
+  "name": "instagram_v1",
+  "description": "A Vue.js project",
+  "version": "1.0.0",
+  "author": "Markus Viola <markus.xamuel.viola@gmail.com>",
+  "private": true,
+  "scripts": {
+    "heroku-prebuild": "npm install --dev",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "prod": "NODE_ENV=production node server.js",
+    "postinstall": "webpack -p",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test:watch": "npm run test -- --watch"
+  },
+  "dependencies": {
+    "@algoz098/vue-player": "^0.4.3",
+    "babel-core": "^6.26.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.2",
+    "express": "^4.17.1",
+    "ipfs-http-client": "^29.1.1",
+    "popper.js": "^1.12.9",
+    "vue": "^2.5.3",
+    "vue-core-video-player": "^0.1.9",
+    "web3": "^1.0.0-beta.37",
+    "webpack": "^4.20.2"
+  },
+  "devDependencies": {
+    "autodll-webpack-plugin": "^0.4.2",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "mini-css-extract-plugin": "^0.5.0",
+    "style-loader": "^0.19.0",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.3",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "engines": {
+    "node": "10.18.1"
+  }
+}
